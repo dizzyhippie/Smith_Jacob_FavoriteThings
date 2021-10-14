@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Things App</title>
+    <title>Jacob's Favorite Things Application</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <section id="container">
-
-
-
-
-
-
-
-
+        <h1 class="hidden">Main Header</h1>
+        <img src="images/logo" alt="Jacob's Logo" id="logo">
+        <section id="intro">
+            <h1>My Favorite Things</h1>
+            <p id="introText">Below are 3 of my favorite things! Click the icons to display what they are.</p>
+        </section>    
+        <section id="selector">
+            <button id="first" class="nav-buttons"></button>
+            <button id="second" class="nav-buttons"></button>
+            <button id="third" class="nav-buttons"></button>
+        </section>
+        <section id="modal">
+            <section class="modal-panel">
+                <div class="fav-img"><img src="" alt="Favorite Thing Picture"></div>
+                <h2 class="fav-name">slug</h2>
+                <h3 class="fav-fact">slug</h3>
+                <p class="fav-desc">slug</p>
+                <div class="modal-foot"></div>
+            </section>
+        </section>
     </section>
+<script src="js/main.js" type="module" defer></script>
 </body>
 </html>

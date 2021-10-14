@@ -1,0 +1,21 @@
+#selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 450px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 50px;
+ }
+
+ .nav-buttons{
+     padding: 25px 50px;
+     border-radius: 25px;
+     border: none;
+     cursor: pointer;
+     background-color: #9F5F80;
+ }
+
+ .nav-buttons:hover{
+   background-color: #583D72;
+}
