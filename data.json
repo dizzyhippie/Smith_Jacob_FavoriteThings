@@ -1,0 +1,21 @@
+{
+    "CCR": {
+        "name":"Creedence Clearwater Revival",
+        "description":"Coordinator",
+        "fact":"i don't know",
+        "pic":"justin.jpg"
+    },
+    "Coffee": {
+        "name":"Iced Shaken Espresso",
+        "description":"super chill prof",
+        "fact":"just john",
+        "pic":"john.jpg"
+    },
+    "BOP": {
+        "name":"Birds of Paradise",
+        "description":"Dark Arts Prof",
+        "fact":"T Dazzle",
+        "pic":"trevor.jpg"
+    }
+  }
+
