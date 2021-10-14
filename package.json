@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/dizzyhippie/Smith_Jacob_FavoriteThings/issues"
   },
-  "homepage": "https://github.com/dizzyhippie/Smith_Jacob_FavoriteThings#readme"
+  "homepage": "https://github.com/dizzyhippie/Smith_Jacob_FavoriteThings#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.2"
+  }
 }
