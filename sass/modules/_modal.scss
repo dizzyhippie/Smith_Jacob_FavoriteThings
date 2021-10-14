@@ -1,7 +1,15 @@
 .modal-panel{
     width: 310px;
-    height: 465px;
+    height: 425px;
     background-color: #EFEACA;
+    position: relative;
+    margin: 0 auto; 
+    padding-top: 50px;
+}
+
+.modal-active{
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-head{
