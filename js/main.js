@@ -25,7 +25,7 @@ function getThings(){
         .catch(error => console.error(error));//find and report any errors into the console window
     }
         // get data on page load
-        //getThings();
+        getThings();
 
               
 function buildModal(info){
@@ -49,7 +49,7 @@ function buildModal(info){
 
 }
 
-ccrButton.addEventListener("click", getThings);
+//ccrButton.addEventListener("click", getThings);
 
 
 })()
