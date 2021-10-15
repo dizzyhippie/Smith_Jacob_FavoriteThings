@@ -17,8 +17,11 @@
 .fav-fact, .fav-desc{
     font-size: 18px;
     text-align: center;
+    display: block;
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 290px;
 }
 
 #instructions{

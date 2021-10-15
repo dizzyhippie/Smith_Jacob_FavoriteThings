@@ -69,8 +69,8 @@ function showData(){
 
     picture.querySelector("img").src =`images/${favorites[key].pic}`;
     thingName.textContent = favorites[key].name;
-    thingFact.textContent = favorites[key].fact;
     thingDesc.textContent = favorites[key].description;
+    thingFact.textContent = favorites[key].fact;
 }
 
 function closeModal(){
