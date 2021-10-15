@@ -6,7 +6,7 @@
 const   ccrButton = document.querySelector("#first"),
         coffeeButton = document.querySelector("#second"),
         bopButton = document.querySelector("#third"),
-        thingImg = document.querySelector(".itemImg"),
+        buttons = document.querySelectorAll("button"),
         thingName = document.querySelector(".itemTitle"),
         thingFact = document.querySelector(".itemFact"),
         thingDesc = document.querySelector(".itemDesc"),
@@ -26,10 +26,9 @@ function getThings(){
     }
         // get data on page load
         getThings();
-
-              
+          
 function buildModal(info){
-    //This will take the information from the data object
+    //Take the information from the data object
     const favorites = Object.keys(info);
 
     favorites.forEach(favorite => {
@@ -38,18 +37,22 @@ function buildModal(info){
         //Entrance point of the template content
         let information = modal.firstElementChild.children;
 
-        //Pop in the info for my favorite things.
-        information[0].textContent = info[favorite].name;
-        information[1].textContent = info[favorite].desc;
-        information[2].textContent = info[favorite].fact;
-        information[3].querySelector("img").src =`images/${info[favorite].pic}`;
+        //Load the images to act as Icon/Buttons
+        information[0].querySelector("img").src =`images/${info[favorite].pic}`;
 
-        container.appendChild(modal)
+        container.appendChild(modal);
     })
-
 }
 
+function showData(){
+   let key = this.dataset.key;
+   debugger;
+}
+
+
 //ccrButton.addEventListener("click", getThings);
+buttons.forEach(button => button.addEventListener("click", showData));
+//buttons.addEventListener("click", showData);
 
 
 })()
