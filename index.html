@@ -12,8 +12,8 @@
         <h1 class="hidden">Main Header</h1>
         <img src="images/smith_Logo.svg" alt="Jacob's Logo" id="logo">
         <section id="intro">
-            <h1>My Favorite Things</h1>
-            <p id="introText">Below are 3 of my favorite things! Click the icons to display what they are.</p>
+            <h1 id="introHead">My Favorite Things</h1>
+            <p id="introText">Below are 3 of my favorite things! Click the buttons to display what they are.</p>
         </section> 
          <section id="selector">
             <button id="first" class="nav-buttons" data-key="CCR">CCR</button>
@@ -32,11 +32,16 @@
         </section>
         <section id="modal-template">
             <section class="modal-panel">
+                <button class="close">x</button>
                 <div class="fav-img"><img src="" alt="Favorite Thing Picture"></div>
                 <h2 class="fav-name"></h2>
                 <h3 class="fav-fact"></h3>
                 <p class="fav-desc"></p>
-                <div class="modal-foot"></div>
+                <div class="modal-foot">
+                    <ul id="instructions">
+                        <li>Click the X in the top right, or anywhere outside of the modal to exit.</li>
+                    </ul>
+                </div>
             </section>
         </section> 
     </section>
