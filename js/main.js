@@ -43,17 +43,14 @@ function getData(){
     .then(data => {
         console.table(data);//Send to console
 
+        
+
     })
     .catch(error => console.error(error));//find and report any errors
 
 }
 // get data on page load, and export to main.js file
 getData();
-
-function buildCCR(){
-    let modal = document.querySelector(".modal-panel").children;
-    
-}
 
 
 
