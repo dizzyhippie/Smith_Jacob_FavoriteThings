@@ -1,59 +1,55 @@
 //imports
+//This import will ensure the data is loaded and able to use in this file on page load
+//import {getThings} from "./components/loadData.js";
 
 (() => {
 const   ccrButton = document.querySelector("#first"),
         coffeeButton = document.querySelector("#second"),
         bopButton = document.querySelector("#third"),
-        thingImg = document.querySelector(".fav-img"),
-        thingName = document.querySelector(".fav-name"),
-        thingFact = document.querySelector(".fav-fact"),
-        thingDesc = document.querySelector(".fav-desc");
-       
+        thingImg = document.querySelector(".itemImg"),
+        thingName = document.querySelector(".itemTitle"),
+        thingFact = document.querySelector(".itemFact"),
+        thingDesc = document.querySelector(".itemDesc"),
+        container = document.querySelector(".favoriteContainer"),
+        template = document.querySelector("#itemTemplate").content;
 
-let things = {
-    "CCR": {
-        "name":"Creedence Clearwater Revival",
-        "description":"The greatest band to ever do it.",
-        "fact":"While their musical style is Louisiana Swamp Rock, the band members are from California.",
-        "pic":"CCR.png"
-    },
-    "Coffee": {
-        "name":"Iced Shaken Espresso",
-        "description":"A dangerous amount of caffeine.",
-        "fact":"It is expensive.",
-        "pic":"Coffee.png"
-    },
-    "BOP": {
-        "name":"Birds of Paradise",
-        "description":"The favourite of my plant collection, a beautiful addition to my living room.",
-        "fact":"The flower resembles a bird, and symbolizes ultimate freedom.",
-        "pic":"BOP.png"
+    
+function getThings(){
+        
+    fetch("./data.json")//Get the data from JSON file
+        .then(res => res.json())//unpack the API response
+        .then(data => {
+            console.table(data);//Send to console
+            buildModal(data);
+            })
+        .catch(error => console.error(error));//find and report any errors into the console window
     }
-}
+        // get data on page load
+        //getThings();
 
-//Create a new function called getThings (or something similar). 
-//Do an initial fetch call, and build the buttons with the data inside that function. JUST the buttons - not the modal stuff.
+              
+function buildModal(info){
+    //This will take the information from the data object
+    const favorites = Object.keys(info);
 
-//you would add something like this
-//: things = data; (goes inside the second .then part => .then(data => { ...other stuff; things = data})
-function getData(){
-        
-    fetch("./data.json")
-    .then(res => res.json())//unpack the API response
-    .then(data => {
-        console.table(data);//Send to console
+    favorites.forEach(favorite => {
+        //Make a copy of the template container
+        let modal = template.cloneNode(true);
+        //Entrance point of the template content
+        let information = modal.firstElementChild.children;
 
-        
+        //Pop in the info for my favorite things.
+        information[0].textContent = info[favorite].name;
+        information[1].textContent = info[favorite].desc;
+        information[2].textContent = info[favorite].fact;
+        information[3].querySelector("img").src =`images/${info[favorite].pic}`;
+
+        container.appendChild(modal)
     })
-    .catch(error => console.error(error));//find and report any errors
 
 }
-// get data on page load, and export to main.js file
-getData();
 
+ccrButton.addEventListener("click", getThings);
 
-
-
-//ccrButton.addEventListener("click", buildCCR);
 
 })()
