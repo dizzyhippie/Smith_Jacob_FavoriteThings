@@ -78,6 +78,7 @@ function closeModal(){
     modal.style.display = "none";
 }
 
+
 buttons.forEach(button => button.addEventListener("click", showData));
 closeButton.addEventListener("click",closeModal);
 
