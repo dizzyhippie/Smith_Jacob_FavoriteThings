@@ -1,32 +1,63 @@
 //imports
-import {getData} from "./components/loadData.js";
 
 (() => {
 const   ccrButton = document.querySelector("#first"),
         coffeeButton = document.querySelector("#second"),
         bopButton = document.querySelector("#third"),
-        theTemplate = document.querySelector(".modal-panel");
-        //modal = document.querySelector(".modal-panel").content;
+        thingImg = document.querySelector(".fav-img"),
+        thingName = document.querySelector(".fav-name"),
+        thingFact = document.querySelector(".fav-fact"),
+        thingDesc = document.querySelector(".fav-desc");
+       
 
-function buildModal(info){
-    let item = Object.keys(info);
-        //item.forEach(favorite => {
-            //let panel = theTemplate;
-           // favoriteInfo = panel.firstElementChild.children;
-
-           //I was trying to configure the above code ^ to work with my json file but I get some errors when changing things.
-           //I cant figure out how to get this info to fill into the modal.
-
-            favoriteInfo[0].querySelector('img').src = `images/${info[favorite].pic}`;
-            favoriteInfo[1].querySelector.textContent = info[favorite].name;
-            favoriteInfo[2].textContent = info[favorite].description;
-            favoriteInfo[3].textContent = info[favorite].fact;
-
-            theTemplate.appendChild(panel);
-       // })
+let things = {
+    "CCR": {
+        "name":"Creedence Clearwater Revival",
+        "description":"The greatest band to ever do it.",
+        "fact":"While their musical style is Louisiana Swamp Rock, the band members are from California.",
+        "pic":"CCR.png"
+    },
+    "Coffee": {
+        "name":"Iced Shaken Espresso",
+        "description":"A dangerous amount of caffeine.",
+        "fact":"It is expensive.",
+        "pic":"Coffee.png"
+    },
+    "BOP": {
+        "name":"Birds of Paradise",
+        "description":"The favourite of my plant collection, a beautiful addition to my living room.",
+        "fact":"The flower resembles a bird, and symbolizes ultimate freedom.",
+        "pic":"BOP.png"
+    }
 }
 
-ccrButton.addEventListener("click", buildModal);
+//Create a new function called getThings (or something similar). 
+//Do an initial fetch call, and build the buttons with the data inside that function. JUST the buttons - not the modal stuff.
 
+//you would add something like this
+//: things = data; (goes inside the second .then part => .then(data => { ...other stuff; things = data})
+function getData(){
+        
+    fetch("./data.json")
+    .then(res => res.json())//unpack the API response
+    .then(data => {
+        console.table(data);//Send to console
+
+    })
+    .catch(error => console.error(error));//find and report any errors
+
+}
+// get data on page load, and export to main.js file
+getData();
+
+function buildCCR(){
+    let modal = document.querySelector(".modal-panel").children;
+    
+}
+
+
+
+
+ccrButton.addEventListener("click", buildCCR);
 
 })()
