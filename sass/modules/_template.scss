@@ -9,13 +9,21 @@
 }
 
 .fav-name{
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 25px;
+    font-family: loos-normal, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #F48375;
 }
 
 .fav-fact, .fav-desc{
     font-size: 18px;
+    font-family: loos-normal, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -24,7 +32,14 @@
     width: 290px;
 }
 
+.fav-desc{
+    color: #F48375;
+}
+
 #instructions{
     text-align: center;
     font-size: 14px;
+    font-family: loos-normal, sans-serif;
+    font-weight: 400;
+    color:#583D72;
 }
