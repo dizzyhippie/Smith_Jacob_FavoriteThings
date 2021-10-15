@@ -3,15 +3,13 @@
 //import {getThings} from "./components/loadData.js";
 
 (() => {
-const   ccrButton = document.querySelector("#first"),
-        coffeeButton = document.querySelector("#second"),
-        bopButton = document.querySelector("#third"),
-        buttons = document.querySelectorAll("button"),
+const   buttons = document.querySelectorAll(".nav-buttons"),
         thingName = document.querySelector(".fav-name"),
         thingFact = document.querySelector(".fav-fact"),
         thingDesc = document.querySelector(".fav-desc"),
         container = document.querySelector(".favoriteContainer"),
-        template = document.querySelector("#itemTemplate").content;
+        template = document.querySelector("#itemTemplate").content,
+        closeButton = document.querySelector(".close");
 
 
 let favorites = {
@@ -63,15 +61,24 @@ function getThings(){
 //}
 
 function showData(){
+    let modal = document.querySelector(".modal-panel");
+    modal.style.display = "block";
+
     let key = this.dataset.key;
     let picture = document.querySelector(".fav-img");
 
-    picture.querySelector("img").src = `images/${favorites[key].pic}`;
+    picture.querySelector("img").src =`images/${favorites[key].pic}`;
     thingName.textContent = favorites[key].name;
     thingFact.textContent = favorites[key].fact;
     thingDesc.textContent = favorites[key].description;
 }
 
+function closeModal(){
+    let modal = document.querySelector(".modal-panel");
+    modal.style.display = "none";
+}
+
 buttons.forEach(button => button.addEventListener("click", showData));
+closeButton.addEventListener("click",closeModal);
 
 })()

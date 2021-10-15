@@ -2,20 +2,22 @@
     display: none;
     width: 310px;
     background-color: #F48375;
-    position: relative;
-    margin: 0 auto; 
     padding-top: 25px;
     margin-bottom: 50px;
+    filter: drop-shadow(10px 5px 7px #000);
+    border-radius: 50px;;
+    position: fixed;
+    //Position the modal in the center of the screen
+    left: 40%;
+    top: 25%;
+
 }
 
-.modal-active{
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .modal-foot{
     background-color: #ffffff;
     padding-top: 30px;
     padding-bottom: 30px; 
+    border-radius: 0px 0px 50px 50px;
 }
 
 
