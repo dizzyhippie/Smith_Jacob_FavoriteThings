@@ -44,7 +44,6 @@ function getData(){
         console.table(data);//Send to console
 
         
-
     })
     .catch(error => console.error(error));//find and report any errors
 
@@ -55,6 +54,6 @@ getData();
 
 
 
-ccrButton.addEventListener("click", buildCCR);
+//ccrButton.addEventListener("click", buildCCR);
 
 })()
