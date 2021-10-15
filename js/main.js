@@ -18,19 +18,19 @@ let favorites = {
         "CCR": {
             "name":"Creedence Clearwater Revival",
             "description":"The greatest band to ever do it.",
-            "fact":"While their musical style is Louisiana Swamp Rock, the band members are from California.",
+            "fact":"Fun Fact: While their musical style is Louisiana Swamp Rock, the band members are from California.",
             "pic":"CCR.png"
         },
         "Coffee": {
             "name":"Iced Shaken Espresso",
             "description":"A dangerous amount of caffeine.",
-            "fact":"It is expensive.",
+            "fact":"Fun Fact: It is expensive.",
             "pic":"Coffee.png"
         },
         "BOP": {
             "name":"Birds of Paradise",
             "description":"The favourite of my plant collection, a beautiful addition to my living room.",
-            "fact":"The flower resembles a bird, and symbolizes ultimate freedom.",
+            "fact":"Fun Fact: The flower resembles a bird, and symbolizes ultimate freedom.",
             "pic":"BOP.png"
         }
 };

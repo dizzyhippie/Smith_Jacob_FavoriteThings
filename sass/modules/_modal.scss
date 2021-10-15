@@ -1,10 +1,11 @@
 .modal-panel{
+    display: none;
     width: 310px;
-    height: 425px;
     background-color: #F48375;
     position: relative;
     margin: 0 auto; 
     padding-top: 25px;
+    margin-bottom: 50px;
 }
 
 .modal-active{
