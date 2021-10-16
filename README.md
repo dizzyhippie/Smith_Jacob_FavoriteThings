@@ -11,5 +11,4 @@ All coding completed by Jacob Smith
 ## SCSS
 ## Gulp
 ## JSON
-## N
 
