@@ -1,7 +1,6 @@
 //imports
 //This import will ensure the data is loaded and able to use in this file on page load
 //import {getThings} from "./components/loadData.js";
-
 (() => {
 const   buttons = document.querySelectorAll(".nav-buttons"),
         thingName = document.querySelector(".fav-name"),
@@ -11,17 +10,14 @@ const   buttons = document.querySelectorAll(".nav-buttons"),
         template = document.querySelector("#itemTemplate").content,
         closeButton = document.querySelector(".close");
 
-
 let favorites = {};
-    
+
 function getThings(){
-        
     fetch("./data.json")//Get the data from JSON file
         .then(res => res.json())//unpack the API response
         .then(data => {
             console.table(data);//Send to console
-            favorites = data;
-            })
+            favorites = data;})
         .catch(error => console.error(error));//find and report any errors into the console window
     }
         // get data on page load
@@ -44,7 +40,6 @@ function closeModal(){
     let modal = document.querySelector(".modal-panel");
     modal.style.display = "none";
 }
-
 
 buttons.forEach(button => button.addEventListener("click", showData));
 closeButton.addEventListener("click",closeModal);
