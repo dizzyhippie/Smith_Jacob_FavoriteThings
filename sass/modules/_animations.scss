@@ -1,0 +1,8 @@
+//For some reason the animations won't work in Brave
+.nav-buttons{
+    transition: transform 225ms;
+}
+
+.nav-buttons:hover{
+    transform: translateY(-10px);
+}
