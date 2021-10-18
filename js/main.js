@@ -6,6 +6,7 @@ const   buttons = document.querySelectorAll(".nav-buttons"),
         thingName = document.querySelector(".fav-name"),
         thingFact = document.querySelector(".fav-fact"),
         thingDesc = document.querySelector(".fav-desc"),
+        thingLink = document.querySelector(".youtube"),
         container = document.querySelector(".favoriteContainer"),
         template = document.querySelector("#itemTemplate").content,
         closeButton = document.querySelector(".close");
@@ -34,6 +35,9 @@ function showData(){
     thingName.textContent = favorites[key].name;
     thingDesc.textContent = favorites[key].description;
     thingFact.textContent = favorites[key].fact;
+    thingLink.textContent = favorites[key].button;
+    thingLink.href = `${favorites[key].link}`;
+    thingLink.classList.add("youtube-text");
 }
 
 function closeModal(){

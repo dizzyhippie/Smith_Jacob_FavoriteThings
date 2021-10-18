@@ -3,19 +3,26 @@
         "name":"Creedence Clearwater Revival",
         "description":"The greatest band to ever do it.",
         "fact":"While their musical style is Louisiana Swamp Rock, the band members are from California.",
-        "pic":"CCR.png"
+        "pic":"CCR.png",
+        "link": "https://www.youtube.com/watch?v=5BmEGm-mraE",
+        "button":"Click this to have your ears blessed"
     },
     "Coffee": {
         "name":"Iced Shaken Espresso",
         "description":"A dangerous amount of caffeine.",
         "fact":"It is expensive.",
-        "pic":"Coffee.png"
+        "pic":"Coffee.png",
+        "link":"https://www.youtube.com/watch?v=aeHsh17KR18",
+        "button":"Learn how to make this here!"
     },
     "BOP": {
         "name":"Birds of Paradise",
         "description":"The favourite of my plant collection, a beautiful addition to my living room.",
         "fact":"The flower resembles a bird, and symbolizes ultimate freedom.",
-        "pic":"BOP.png"
+        "pic":"BOP.png",
+        "link":"https://www.youtube.com/watch?v=NYSKhN2DkQc",
+        "button":"How to take care of it!"
+        
     }
   }
 
