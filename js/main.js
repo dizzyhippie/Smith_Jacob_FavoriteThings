@@ -7,8 +7,6 @@ const   buttons = document.querySelectorAll(".nav-buttons"),
         thingFact = document.querySelector(".fav-fact"),
         thingDesc = document.querySelector(".fav-desc"),
         thingLink = document.querySelector(".youtube"),
-        container = document.querySelector(".favoriteContainer"),
-        template = document.querySelector("#itemTemplate").content,
         closeButton = document.querySelector(".close");
 
 let favorites = {};
